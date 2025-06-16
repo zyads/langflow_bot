@@ -25,3 +25,14 @@ jobs:
           context: ./langflow/
           push: true
           tags: ghcr.io/${{ github.repository }}:latest
+
+      - name: Run Docker container
+        run: |
+          docker run -d \
+            --name my-running-container \
+            -p 8080:80 \
+            ghcr.io/${{ github.repository }}:latest
+            
+      - name: Show container logs
+        run: |
+          docker logs my-running-container
