@@ -1,0 +1,20 @@
+
+🧵 Example 5: Splunk Logging Issue
+[ModuleTeam_Nora | 4:10 PM]
+We’re not seeing any logs from the auth-service in Splunk since yesterday. Nothing in the auth-prod index.
+
+[DevOps_Tariq | 4:12 PM]
+Hey Nora, checking the forwarder config now. Was there a recent deployment?
+
+[ModuleTeam_Nora | 4:13 PM]
+Yes, we deployed a new version yesterday morning.
+
+[DevOps_Tariq | 4:17 PM]
+Looks like the Splunk forwarder config was overwritten. I’ll redeploy the correct config and restart the forwarder.
+
+[DevOps_Tariq | 4:25 PM]
+Done. Logs should start flowing in a few minutes.
+
+[ModuleTeam_Nora | 4:30 PM]
+Confirmed — logs are back. Appreciate the quick fix!
+

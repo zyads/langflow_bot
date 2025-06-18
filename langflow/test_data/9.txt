@@ -1,0 +1,11 @@
+Python Dependency Conflicts
+[ModuleTeam_Eric | 2:05 PM]
+Our pipeline fails with pkg_resources.DistributionNotFound when running tests. Looks like a dependency mismatch.
+
+[DevOps_Nadia | 2:10 PM]
+This might be due to conflicting versions in your requirements.txt and the base image. We’ll need to standardize Python environments across services.
+
+[DevOps_Nadia | 2:15 PM]
+I’ll open a Jira ticket to define a base Python image strategy and align dependencies across teams.
+
+➡️ Jira Ticket: PLAT-312 - Define and implement standardized Python base images

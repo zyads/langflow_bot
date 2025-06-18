@@ -1,0 +1,11 @@
+Runner Resource Exhaustion
+[ModuleTeam_Anya | 9:15 AM]
+Our builds are randomly failing with out of memory errors on the self-hosted runners. Can we increase the memory allocation?
+
+[DevOps_Ryan | 9:18 AM]
+Hey Anya, sounds like the runners are hitting their memory limits. We’ll need to evaluate the current VM specs and possibly resize them.
+
+[DevOps_Ryan | 9:22 AM]
+This will require coordination with the Infra team. I’ll open a Jira ticket to track the resource upgrade and notify you once it’s scheduled.
+
+➡️ Jira Ticket: INFRA-2043 - Evaluate and upgrade memory on CI runners

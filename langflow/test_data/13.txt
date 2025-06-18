@@ -1,0 +1,15 @@
+Hotfix Coordination
+[DevTeam_Nora | 11:15 AM]
+We need to push a hotfix for auth-service. A login regression was reported in production this morning.
+
+[ReleaseTeam_James | 11:17 AM]
+Understood. Is the fix ready and tested?
+
+[DevTeam_Nora | 11:20 AM]
+Yes, it’s in the hotfix/login-bug branch. QA approved it 10 minutes ago.
+
+[ReleaseTeam_James | 11:25 AM]
+I’ll prep a patch release v1.8.1 and deploy to production in the next 15 minutes. Will update here once it’s live.
+
+[DevTeam_Nora | 11:40 AM]
+Thanks, James. I’ll monitor the logs post-deploy.

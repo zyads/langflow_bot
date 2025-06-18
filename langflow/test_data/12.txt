@@ -1,0 +1,12 @@
+Versioning Clarification
+[DevTeam_Eric | 3:00 PM]
+Quick question — should the next release of inventory-service be 1.5.0 or 2.0.0? We’re introducing a new API endpoint.
+
+[ReleaseTeam_Sophia | 3:03 PM]
+If the new endpoint is backward-compatible, 1.5.0 is fine. If it breaks existing clients, we should bump to 2.0.0.
+
+[DevTeam_Eric | 3:05 PM]
+It’s additive and doesn’t affect existing behavior. We’ll go with 1.5.0 then.
+
+[ReleaseTeam_Sophia | 3:06 PM]
+Perfect. I’ll update the release notes accordingly.

@@ -1,0 +1,26 @@
+🧵 Example 2: GitHub Pipeline Issue
+[ModuleTeam_Sara | 11:03 AM]
+Our GitHub pipeline is failing at the upload-artifact step with this error:
+Error: Artifact upload failed: The artifact size exceeds the limit of 2 GB.
+
+[DevOps_Mark | 11:06 AM]
+Hey Sara, GitHub has a 2 GB limit per artifact. Are you uploading a full build directory?
+
+[ModuleTeam_Sara | 11:07 AM]
+Yes, it includes logs, binaries, and test reports.
+
+[DevOps_Mark | 11:10 AM]
+You might want to split the artifact into smaller chunks or exclude unnecessary files. Try this in your workflow:
+
+- name: Upload test reports
+  uses: actions/upload-artifact@v3
+  with:
+    name: test-reports
+    path: reports/
+
+
+
+And exclude large binaries unless needed.
+
+[ModuleTeam_Sara | 11:20 AM]
+Got it. Split the artifacts and it worked. Thanks!

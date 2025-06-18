@@ -1,0 +1,18 @@
+🧵 Example 1: Infrastructure Issue in Runner
+[ModuleTeam_Ravi | 10:12 AM]
+Hey DevOps, our GitHub Actions runner is stuck on the checkout step. It just hangs and times out. Any idea what’s going on?
+
+[DevOps_Lena | 10:14 AM]
+Hi Ravi! Is this happening on a self-hosted runner or GitHub-hosted?
+
+[ModuleTeam_Ravi | 10:15 AM]
+Self-hosted, in the ci-runners group.
+
+[DevOps_Lena | 10:18 AM]
+Thanks. I just checked — the runner VM is up but the GitHub runner service isn’t responding. Restarting the service now.
+
+[DevOps_Lena | 10:21 AM]
+Service restarted. Can you re-run the job?
+
+[ModuleTeam_Ravi | 10:25 AM]
+Yep, that fixed it. Thanks!

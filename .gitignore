@@ -1,0 +1,6 @@
+.envrc
+
+*.log
+*.sqlite3
+
+genai-stack/

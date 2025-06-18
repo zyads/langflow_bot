@@ -1,0 +1,11 @@
+Build Cache Corruption
+[ModuleTeam_Luis | 3:30 PM]
+Our Gradle builds are failing intermittently. Clearing the cache helps, but it keeps coming back.
+
+[DevOps_Sam | 3:35 PM]
+Sounds like the shared build cache might be corrupted or misconfigured. We’ll need to investigate the cache server and possibly reset it.
+
+[DevOps_Sam | 3:40 PM]
+Logging a Jira ticket to track this and coordinate with the Build Engineering team.
+
+➡️ Jira Ticket: BUILD-1099 - Investigate and resolve Gradle build cache corruption

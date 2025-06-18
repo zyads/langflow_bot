@@ -1,0 +1,12 @@
+Coordinating a Scheduled Release
+[ReleaseTeam_Emily | 9:00 AM]
+Hi team, just a reminder that we’re targeting the 2.3.0 release for orders-service today at 3 PM EST. Please confirm if your changes are merged and tested.
+
+[DevTeam_Ajay | 9:05 AM]
+Hey Emily, my PR for the new discount logic is merged and passed QA. Good to go from my side.
+
+[DevTeam_Lina | 9:07 AM]
+Same here — the logging improvements are in and verified.
+
+[ReleaseTeam_Emily | 9:10 AM]
+Great, thanks! I’ll start the release prep at 2:30 PM and ping here before the deployment begins.

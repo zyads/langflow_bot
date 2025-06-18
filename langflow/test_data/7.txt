@@ -1,0 +1,10 @@
+[ModuleTeam_Maya | 4:50 PM]
+We’re seeing a 30-minute delay in logs appearing in Splunk for the checkout-service.
+
+[DevOps_Tariq | 4:55 PM]
+Thanks Maya. This could be due to ingestion queue backlog or indexer performance. We’ll need to check Splunk metrics and possibly scale ingestion.
+
+[DevOps_Tariq | 5:00 PM]
+Creating a Jira ticket to investigate and work with the Observability team.
+
+➡️ Jira Ticket: OBS-2214 - Investigate Splunk ingestion delay for checkout-service logs

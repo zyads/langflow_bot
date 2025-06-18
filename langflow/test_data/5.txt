@@ -1,0 +1,16 @@
+ Example 4: Build Issue
+[ModuleTeam_Jin | 3:30 PM]
+Our Maven build is failing with:
+Could not resolve dependencies for project: Could not find artifact com.example:lib-utils:jar:1.2.3
+
+[DevOps_Arjun | 3:33 PM]
+Hi Jin, is that artifact hosted in a private repo?
+
+[ModuleTeam_Jin | 3:34 PM]
+Yes, in our internal Nexus.
+
+[DevOps_Arjun | 3:36 PM]
+Check if the Nexus repo URL is configured in your settings.xml. Also, make sure the credentials are set in the GitHub secrets if you're using them in the pipeline.
+
+[ModuleTeam_Jin | 3:45 PM]
+Ah, the credentials were missing. Added them and it works now. Thanks!

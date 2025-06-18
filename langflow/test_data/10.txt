@@ -1,0 +1,11 @@
+GitHub Actions Rate Limiting
+[ModuleTeam_Tom | 11:40 AM]
+We’re hitting GitHub API rate limits during our workflows. It’s slowing down our deployments.
+
+[DevOps_Lina | 11:43 AM]
+Thanks for flagging. This might be due to unauthenticated API calls or excessive parallel jobs. We’ll need to audit usage and possibly request a higher quota.
+
+[DevOps_Lina | 11:50 AM]
+Creating a Jira ticket to investigate and coordinate with GitHub support if needed.
+
+➡️ Jira Ticket: CI-1587 - Investigate GitHub API rate limit issues and optimize usage

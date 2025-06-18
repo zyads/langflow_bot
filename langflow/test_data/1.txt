@@ -1,0 +1,51 @@
+[ModuleTeam_Alice | 9:02 AM]
+Hey DevOps, our CI pipeline for the payments-service is failing during the Docker build step. Getting an error:
+failed to solve: process "/bin/sh -c npm install" did not complete successfully.
+
+Any ideas?
+
+[DevOps_Jay | 9:05 AM]
+Hi Alice! That error usually means something went wrong during the npm install step. Could you share the full logs from the build step?
+
+[ModuleTeam_Alice | 9:07 AM]
+Sure, here’s the tail end of the log:
+
+npm ERR! code EAI_AGAIN
+npm ERR! syscall getaddrinfo
+npm ERR! errno EAI_AGAIN
+npm ERR! request to https://registry.npmjs.org/ failed, reason: getaddrinfo EAI_AGAIN
+[DevOps_Jay | 9:10 AM]
+Thanks! That EAI_AGAIN error usually indicates a DNS resolution issue. Is this happening consistently or intermittently?
+
+[ModuleTeam_Alice | 9:11 AM]
+It’s been happening consistently since this morning. We didn’t change anything in the Dockerfile.
+
+[DevOps_Jay | 9:13 AM]
+Got it. Are you using a self-hosted runner or GitHub-hosted runners?
+
+[ModuleTeam_Alice | 9:14 AM]
+Self-hosted runner on our internal Kubernetes cluster.
+
+[DevOps_Jay | 9:17 AM]
+Okay, that helps. We had a DNS issue in the cluster earlier today. Can you try adding this to your Dockerfile temporarily to see if it resolves the issue?
+
+
+Let me know if that works.
+
+[ModuleTeam_Alice | 9:25 AM]
+Tried that, but still getting the same error. Could it be a network policy issue?
+
+[DevOps_Jay | 9:28 AM]
+Possibly. Let me check the network policies applied to your namespace. What’s the namespace name?
+
+[ModuleTeam_Alice | 9:29 AM]
+payments-dev
+
+[DevOps_Jay | 9:35 AM]
+Confirmed — there’s a new egress policy applied this morning that restricts external traffic. I’ll update it to allow access to registry.npmjs.org.
+
+[ModuleTeam_Alice | 9:42 AM]
+Awesome, thanks! Just retried the pipeline and it passed. Appreciate the help!
+
+[DevOps_Jay | 9:43 AM]
+Glad to hear it! I’ll document this in the runbook. Let us know if anything else comes up.

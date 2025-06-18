@@ -1,0 +1,15 @@
+Release Blocker Identified
+[ReleaseTeam_Emily | 2:30 PM]
+Starting prep for the 2.3.0 release. Any last-minute blockers?
+
+[DevTeam_Ravi | 2:32 PM]
+Hold on — we just found a bug in the discount logic during staging validation. It’s applying the wrong rate for bulk orders.
+
+[ReleaseTeam_Emily | 2:33 PM]
+Thanks for the heads-up. Let’s pause the release. Can you estimate how long the fix will take?
+
+[DevTeam_Ravi | 2:35 PM]
+Already working on it. Should have a fix ready in 30–45 minutes.
+
+[ReleaseTeam_Emily | 2:36 PM]
+Okay, we’ll reschedule the release to 4 PM pending your fix and QA sign-off.
