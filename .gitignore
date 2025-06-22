@@ -1,4 +1,4 @@
-.envrc
+.env
 
 *.log
 *.sqlite3
